@@ -1,0 +1,31 @@
+body {
+	background-color: #008A4F;
+	padding: 30px;
+}
+
+p {
+	font-family: Georgia, serif;
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	color: #002A18;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.title {
+	font-family: Georgia, serif;
+	text-align: center;
+	font-size: 3em;
+	color: #002A18;
+}
+
+.image {	
+	display: block;
+	width: 40%;
+	height: auto;
+	margin-top: 6%;
+	margin-right: auto;
+	margin-left: auto;
+	box-shadow: 1px 1px 5px #000;
+}
