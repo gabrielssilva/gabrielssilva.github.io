@@ -1,0 +1,25 @@
+body {
+	background-color: #3BABDB;
+	padding: 30px;
+}
+
+p {
+	font-family: Verdana;
+	margin-right: auto;
+	margin-left: auto;
+	color: #025072;
+	text-align: center;
+}
+
+.time {
+	font-size: 9em;
+	margin-top: 0;
+	font-weight: bold;
+}
+
+.title {
+	font-family: Verdana;
+	text-align: center;
+	font-size: 2em;
+	color: #025072;
+}
