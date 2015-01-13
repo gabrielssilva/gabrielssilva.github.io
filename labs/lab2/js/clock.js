@@ -1,6 +1,6 @@
 function getTime() {
 	var datetime = new Date();
-	document.getElementById("clock").innerHTML = datetime.toLocaleTimeString();
+	$("#clock").html(datetime.toLocaleTimeString());
 	setTimeout(getTime, 1000);
 }
 
