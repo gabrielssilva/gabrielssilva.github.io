@@ -1,8 +1,7 @@
 function getTime() {
 	var datetime = new Date();
 	document.getElementById("clock").innerHTML = datetime.toLocaleTimeString();
-	setTimeout(getTime, 500);
+	setTimeout(getTime, 1000);
 }
 
-getTime();
-setInterval(getTime, 500);
+$(document).onLoad = getTime();
