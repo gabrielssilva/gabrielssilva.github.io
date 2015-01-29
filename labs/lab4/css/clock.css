@@ -1,0 +1,33 @@
+body {
+	background-color: #3BABDB;
+	padding: 30px;
+}
+
+p {
+	font-family: Verdana;
+	margin-right: auto;
+	margin-left: auto;
+	color: #025072;
+	text-align: center;
+}
+
+.time {
+	font-size: 9em;
+	margin-top: 0;
+	font-weight: bold;
+	margin-bottom: 0.8em;
+}
+
+.title {
+	font-family: Verdana;
+	text-align: center;
+	font-size: 2em;
+	color: #025072;
+}
+
+.icon-github {
+	content: url(github-icon.png);
+	margin-right: 0.5em;
+	width : 2.5em;
+	height: auto;
+}
