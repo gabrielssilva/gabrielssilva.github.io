@@ -1,33 +1,144 @@
-body {
-	background-color: #3BABDB;
-	padding: 30px;
+.container {
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+	padding-top: 4em;
+	padding-bottom: 3em;
 }
 
-p {
-	font-family: Verdana;
-	margin-right: auto;
-	margin-left: auto;
-	color: #025072;
+#main-row, #forecast-row {
+	clear: both;
+	width: 100%;
+}
+
+#forecast-row {
+	margin-top: 0em;
+}
+
+.weather, .main, .alarms {
 	text-align: center;
+	float: left;
+	width: 33%;
 }
 
-.time {
-	font-size: 9em;
-	margin-top: 0;
-	font-weight: bold;
-	margin-bottom: 0.8em;
+.weather {
+	text-align: left;
+	margin-top: 9em;
 }
-
-.title {
-	font-family: Verdana;
+.weather.small {
 	text-align: center;
+	margin-top: 3em;
+	float: left;
+	width: 20%;
+}
+
+.alarms {
+	text-align: right;
+	margin-top: 9em;
+}
+
+.alarms {
+	text-align: right;
+}
+
+.cold {
+	background-color: #95A5A6;
+}
+
+.chilly {
+	background-color: #1ABC9C;
+}
+
+.nice {
+	background-color: #2980B9;
+}
+
+.warm {
+background-color: #E67E22;
+}
+
+.hot {
+	background-color: #E74C3C;
+}
+
+
+#location, #date {
 	font-size: 2em;
-	color: #025072;
+	line-height: 60%;
+}
+
+#date {
+	font-size: 1.5em;
+}
+
+#time {
+	font-size: 11em;
+	line-height: 100%;
+}
+
+.forecast-label {
+	width: 70%;
+	font-size: 1.5em;
+}
+.forecast-label.small {
+	width: 100%;
+	padding-top: 0.8em;
+	font-size: 1.3em;
+}
+
+.forecast-temp {
+	width: 70%;
+	font-size: 4em;
+	padding-top: 0.5em;
+	line-height: 55%;
+}
+
+#alarm-label {
+	font-size: 1.8em;
 }
 
 .icon-github {
-	content: url(github-icon.png);
+	content: url(../img/github-icon.png);
 	margin-right: 0.5em;
 	width : 2.5em;
 	height: auto;
+}
+
+.forecast-icon {
+	width: 10em;
+	height: auto;
+}
+.forecast-icon.small {
+	width: 6em;
+	height: auto;
+}
+
+#alarm-icon {
+	margin-right: -2em;
+	width: 10em;
+	content: url(../img/alarm.png);
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	background-color: #1F1F1F;
+	padding-right: 1em;
+	padding-left: 1em;
+	padding-top: 0.7em;
+	padding-bottom: 0.3em;
+}
+
+.text-footer {
+	padding-top: 0.5em;
+	color: #ffffff;
+	width: 70%;
+	float: left;
+}
+
+.btn-footer {
+	width: 30%;
+	float:right;
+	text-align: right;
 }

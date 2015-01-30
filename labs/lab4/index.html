@@ -1,24 +1,68 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Gabriel Silva's Lab 2</title>
+		<title>Gabriel Silva's Lab 4</title>
 
 		<link href="../../css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/clock.css" rel="stylesheet" type="text/css">
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	</head>
-	<body>
-		<h1 class="title"> The Most Awesome Clock </h1>
-		<h1 class="title">No Alarms Set</h1>
-		<p class="time" id="clock">00:00:00</p>
+	<body class="chilly">
+		<div class="container">
 
-		<div class="text-center">
-			<a class="btn btn-lg btn-primary text-center" href="https://github.com/gabrielssilva/gabrielssilva.github.io/tree/master/labs/lab2">
-	    		<img class="icon-github"></img>View on GitHub
-	  		</a>
-	  	</div>
+			<div id="main-row">
+				<div class="weather">
+					<img class="forecast-icon big"></img>
+					<p class="forecast-temp"></p>
+					<p class="forecast-label big"></p>
+				</div>
+				<div class="main">
+					<p id="location"></p>
+					<p id="date"></p>
+					<p id="time"></p>
+				</div>
+				<div class="alarms">
+					<img id="alarm-icon"></img>
+					<p id="alarm-label">No alarms set</p>
+				</div>
+			</div>
 
-		<script src="js/clock.js" type="text/javascript"></script>
+			<div id="forecast-row">
+				<div class="weather small">
+					<img class="forecast-icon small day1"></img>
+					<p class="forecast-label small day1"></p>
+				</div>
+				<div class="weather small">
+					<img class="forecast-icon small day2"></img>
+					<p class="forecast-label small day2"></p>
+				</div>
+				<div class="weather small">
+					<img class="forecast-icon small day3"></img>
+					<p class="forecast-label small day3"></p>
+				</div>
+				<div class="weather small">
+					<img class="forecast-icon small day4"></img>
+					<p class="forecast-label small day4"></p>
+				</div>
+				<div class="weather small">
+					<img class="forecast-icon small day5"></img>
+					<p class="forecast-label small day5"></p>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="text-center btn-footer">
+				<a class="btn btn-primary text-center chilly" href="https://github.com/gabrielssilva/gabrielssilva.github.io/tree/master/labs/lab4">
+		    		<img class="icon-github"></img>View on GitHub
+		  		</a>
+		  	</div>
+
+		  	<p class="text-footer">
+		  		Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a href="http://twitter.com/sesisesisesi" title="Ema Dimitrova">Ema Dimitrova</a>, <a href="http://www.simpleicon.com" title="SimpleIcon">SimpleIcon</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>         is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+		  	</p>
+	  </footer>
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	  <script type="text/javascript" src="js/clock.js"></script>
 	</body>
 </html>
