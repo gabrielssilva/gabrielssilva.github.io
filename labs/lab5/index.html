@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gabriel Silva's Lab 5</title>
+
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/clock.css" rel="stylesheet" type="text/css">
+		<link href="css/alarm.css" rel="stylesheet" type="text/css">
+	</head>
+	<body class="chilly">
+		<div class="container">
+
+			<div id="main-row">
+				<div class="weather">
+					<img class="forecast-icon big"></img>
+					<p class="forecast-temp"></p>
+					<p class="forecast-label big"></p>
+				</div>
+				<div class="super-main">
+					<div class="main">
+						<p id="location"></p>
+						<p id="date"></p>
+						<p id="time"></p>
+					</div>
+					<div class="alarm-container">
+						<div id="alarmHeader" class="flexable">
+							<h2 id="alarm-header-title">Alarms</h2>
+							<a id="add-btn" class="btn btn-primary text-center chilly" href="#"><img id="alarm-icon"></img>Add Alarm</a>
+						</div>
+
+						<div id="alarms">
+						</div>
+					</div>
+
+					<div id="mask" class="hide"></div>
+					<div id="popup" class="hide">
+					    <h2>Add Alarm</h2>
+					    <div id="timeContainer">
+					        <select id="hours">
+					            <option>01</option>
+					            <option>02</option>
+					            <option>03</option>
+					            <option>04</option>
+					            <option>05</option>
+					            <option>06</option>
+					            <option>07</option>
+					            <option>08</option>
+					            <option>09</option>
+					            <option>10</option>
+					            <option>11</option>
+					            <option>12</option>
+					        </select>
+					        <select id="mins">
+					            <option>00</option>
+					           	<option>10</option>
+					           	<option>15</option>
+					           	<option>20</option>
+					           	<option>25</option>
+					           	<option>30</option>
+					           	<option>35</option>
+					           	<option>40</option>
+					           	<option>45</option>
+					           	<option>50</option>
+					           	<option>55</option>
+					        </select>
+					        <select id="ampm">
+					            <option>AM</option>
+					            <option>PM</option>
+					        </select>
+					    </div>
+					    <input type="text" id="alarmName" maxLength="30" placeholder="Alarm Name" />      
+					    <div class="flexable">
+					        <input type="button" id="cancel-btn" value="Cancel" class="button"/>
+					        <input type="button" id="set-btn" value="Set Alarm" class="button"/>
+					    </div>
+					</div>
+				</div>
+			</div>
+
+			<div id="forecast-row">
+				<div class="weather small">
+					<img class="forecast-icon small day1"></img>
+					<p class="forecast-label small day1"></p>
+				</div>
+				<div class="weather small">
+					<img class="forecast-icon small day2"></img>
+					<p class="forecast-label small day2"></p>
+				</div>
+				<div class="weather small">
+					<img class="forecast-icon small day3"></img>
+					<p class="forecast-label small day3"></p>
+				</div>
+				<div class="weather small">
+					<img class="forecast-icon small day4"></img>
+					<p class="forecast-label small day4"></p>
+				</div>
+				<div class="weather small">
+					<img class="forecast-icon small day5"></img>
+					<p class="forecast-label small day5"></p>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="text-center btn-footer">
+				<a class="btn btn-primary text-center chilly" href="https://github.com/gabrielssilva/gabrielssilva.github.io/tree/master/labs/lab4">
+		    		<img class="icon-github"></img>View on GitHub
+		  		</a>
+		  	</div>
+
+		  	<p class="text-footer">
+		  		Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a href="http://twitter.com/sesisesisesi" title="Ema Dimitrova">Ema Dimitrova</a>, <a href="http://www.simpleicon.com" title="SimpleIcon">SimpleIcon</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>         is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+		  	</p>
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
+
+		<script type="text/javascript" src="js/alarm.js"></script>	  
+		<script type="text/javascript" src="js/clock.js"></script>
+  
+	</body>
+</html>

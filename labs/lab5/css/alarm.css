@@ -1,0 +1,101 @@
+h2 {
+	color: #333;
+	margin-top: 0px;
+}
+.hide {
+	display: none;
+}
+.flexable {
+	display: flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	
+	-webkit-flex-flow: nowrap;
+}
+/********** The container that holds the alarm section *********/
+.alarm-container {
+	padding: 0.5em;
+	margin-top: 2em;
+	background-color: rgba(160,160,160,0.6);
+	border-radius: 4px;
+	height: 30%;
+}
+#alarmHeader {
+	position: relative;
+	border-bottom: 1px solid #bbb;
+	padding-bottom: 1em;
+}
+#alarmHeader h2 {
+	justify-content:flex-end;
+}
+#alarmHeader .btn {
+	position: absolute;
+	right: 0px;
+}
+#alarms {
+	margin-top:20px;
+}
+/********** The black transparent mask when adding an alarm clock *********/
+#mask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	top: 0;
+	left: 0;
+}
+/********** The white popup container when adding an alarm clock *********/
+#popup {
+	position: absolute;
+	top: 30%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	z-index: 1;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 20px;
+	text-align: center;
+}
+#popup h2 {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 1em;
+}
+#popup .button {
+	margin: 0px 10px;
+}
+#popup #alarmName {
+	width: 90%;
+	font-size: 14px;
+	margin: 10px auto 30px auto;
+}
+
+.alarm-entry {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	border-bottom: 1px solid #aaa;
+	width: 60%;
+}
+
+.name {
+	text-align: center;
+	width: 50%;
+}
+
+.time {
+	text-align: center;
+	width: 50%;
+}
+
+.remove-button {
+	-webkit-appearance: button;
+	font-size: 0.5em; 
+}
