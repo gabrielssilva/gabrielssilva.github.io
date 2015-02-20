@@ -1,9 +1,11 @@
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : 'private',
+    appId      : '1559290621004197',
     xfbml      : true,
     version    : 'v2.2'
   });
+
+  checkLoginState();
 };
 
 

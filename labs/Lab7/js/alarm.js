@@ -16,12 +16,13 @@ function addAlarm() {
 			var ampm = $("#ampm option:selected").text();
 			var time = hours+":"+mins+" "+ampm;
 			var alarmName = $("#alarmName").val();
+			var userID = response.authResponse.userID;
 
-			Parse.initialize("private", "private");
+			Parse.initialize("RT7cnFXGzL1ORWU2aUdZcnIk6lwIFOq72eKC1YZq", "4sI2UrUOygjaRUhNAAAgLyODWq1PMHAx5UKLaAXy");
 			var AlarmObject = Parse.Object.extend("Alarm");
 			var newAlarm = new AlarmObject();
-			newAlarm.save({ "time": time, "name": alarmName }, { success: function(object) {
-					getAllAlarms();
+			newAlarm.save({ "time": time, "name": alarmName, "uid": userID }, { success: function(object) {
+					getAllAlarms(userID);
 					hideAlarmPopup();
 				}
 			});
@@ -56,27 +57,32 @@ function insertAlarm(id, time, alarmName) {
 }
 
 function removeAlarm(alarmId) {
-	Parse.initialize("private", "private");
+	FB.getLoginStatus(function(response) {
+		if (response.status === 'connected') {
+			Parse.initialize("RT7cnFXGzL1ORWU2aUdZcnIk6lwIFOq72eKC1YZq", "4sI2UrUOygjaRUhNAAAgLyODWq1PMHAx5UKLaAXy");
 
-	var AlarmObject = Parse.Object.extend("Alarm");
-	var query = new Parse.Query(AlarmObject);
-	query.get(alarmId, {
-		success: function(result) {
-			result.destroy({
-				success: function() {
-					getAllAlarms();
+			var AlarmObject = Parse.Object.extend("Alarm");
+			var query = new Parse.Query(AlarmObject);
+			query.get(alarmId, {
+				success: function(result) {
+					result.destroy({
+						success: function() {
+							getAllAlarms(response.authResponse.userID);
+						}
+					});
 				}
 			});
 		}
 	});
 }
 
-function getAllAlarms() {
+function getAllAlarms(userID) {
 	$("#alarms").html("");
 
-	Parse.initialize("private", "private");
+	Parse.initialize("RT7cnFXGzL1ORWU2aUdZcnIk6lwIFOq72eKC1YZq", "4sI2UrUOygjaRUhNAAAgLyODWq1PMHAx5UKLaAXy");
 	var AlarmObject = Parse.Object.extend("Alarm");
 	var query = new Parse.Query(AlarmObject);
+	query.equalTo("uid", userID);
 	query.find({
 		success: function(results) {
 			if (results.length == 0) {
@@ -95,7 +101,7 @@ function getAllAlarms() {
 
 function statusChangeCallback(response) {
 	if (response.status === 'connected') {
-		getAllAlarms();
+		getAllAlarms(response.authResponse.userID);
 		$("#add-btn").removeClass("hide");
 	} else {
 		$("#add-btn").addClass("hide");
