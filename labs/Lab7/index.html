@@ -7,10 +7,9 @@
 		<link href="css/clock.css" rel="stylesheet" type="text/css">
 		<link href="css/alarm.css" rel="stylesheet" type="text/css">
 	</head>
-	<body class="chilly">
-		<script type="text/javascript" src="js/load_facebook_sdk.js"></script>	
-		<div class="container">
+	<body class="chilly">    
 
+		<div class="container">
 			<div id="main-row">
 				<div class="weather">
 					<img class="forecast-icon big"></img>
@@ -26,9 +25,11 @@
 					<div class="alarm-container">
 						<div id="alarmHeader" class="flexable">
 							<h2 id="alarm-header-title">Alarms</h2>
-							<fb:login-button scope="public_profile" onlogin="checkLoginState();">
-							</fb:login-button>
-							<a id="add-btn" class="btn btn-primary text-center hide" href="#"><img id="alarm-icon"></img>Add Alarm</a>
+
+              <div id="btns-holder">
+							   <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+							   <a id="add-btn" class="btn btn-primary text-center hide" href="#"><img id="alarm-icon"></img>Add Alarm</a>
+              </div>  
 						</div>
 
 						<div id="alarms">
@@ -80,6 +81,8 @@
 				</div>
 			</div>
 
+
+
 			<div id="forecast-row">
 				<div class="weather small">
 					<img class="forecast-icon small day1"></img>
@@ -118,7 +121,7 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.4.min.js"></script>
-
+		<script type="text/javascript" src="js/load_facebook_sdk.js"></script>
 		<script type="text/javascript" src="js/alarm.js"></script>	  
 		<script type="text/javascript" src="js/clock.js"></script>
   

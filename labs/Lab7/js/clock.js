@@ -31,7 +31,7 @@ function setBodyClass(temp) {
 }
 
 function getTemp(response, statusR, xhrR) {
-	var key = "<private>";
+	var key = "private";
 	var position = response.loc;
 	var city = response.city;
 	var region = response.region;

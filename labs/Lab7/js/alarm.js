@@ -17,7 +17,7 @@ function addAlarm() {
 			var time = hours+":"+mins+" "+ampm;
 			var alarmName = $("#alarmName").val();
 
-			Parse.initialize("<private>", "<private>");
+			Parse.initialize("private", "private");
 			var AlarmObject = Parse.Object.extend("Alarm");
 			var newAlarm = new AlarmObject();
 			newAlarm.save({ "time": time, "name": alarmName }, { success: function(object) {
@@ -56,7 +56,7 @@ function insertAlarm(id, time, alarmName) {
 }
 
 function removeAlarm(alarmId) {
-	Parse.initialize("<private>", "<private>");
+	Parse.initialize("private", "private");
 
 	var AlarmObject = Parse.Object.extend("Alarm");
 	var query = new Parse.Query(AlarmObject);
@@ -74,7 +74,7 @@ function removeAlarm(alarmId) {
 function getAllAlarms() {
 	$("#alarms").html("");
 
-	Parse.initialize("<private>", "<private>");
+	Parse.initialize("private", "private");
 	var AlarmObject = Parse.Object.extend("Alarm");
 	var query = new Parse.Query(AlarmObject);
 	query.find({
