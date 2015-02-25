@@ -19,6 +19,7 @@ function addAlarm() {
 	var AlarmObject = Parse.Object.extend("Alarm");
 	var newAlarm = new AlarmObject();
 	newAlarm.save({ "time": time, "name": alarmName }, { success: function(object) {
+			ga('send', 'event', 'Alarm', 'Add');
 			getAllAlarms();
 			hideAlarmPopup();
 		}
@@ -60,6 +61,7 @@ function removeAlarm(alarmId) {
 		success: function(result) {
 			result.destroy({
 				success: function() {
+					ga('send', 'event', 'Alarm', 'Delete');
 					getAllAlarms();
 				}
 			});
