@@ -1,0 +1,21 @@
+body {
+	background-color: #ddd;
+}
+
+#container {
+	position: relative;
+	top: 40%;
+	text-align: center;
+}
+
+#label {
+	
+}
+
+#login-button {
+	width: 10em;
+}
+
+.hide {
+	display: none;
+}
